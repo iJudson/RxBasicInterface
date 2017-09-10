@@ -28,10 +28,20 @@
         <!--Menu View Controller-->
         <scene sceneID="aWa-xl-seW">
             <objects>
-                <viewController storyboardIdentifier="MenuViewController" id="RSx-rb-8tb" customClass="MenuViewController" customModule="RxBasicInterface" customModuleProvider="target" sceneMemberID="viewController"/>
+                <viewController storyboardIdentifier="MenuViewController" id="RSx-rb-8tb" customClass="MenuViewController" customModule="RxBasicInterface" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9W0-0w-22D"/>
+                        <viewControllerLayoutGuide type="bottom" id="a1M-S7-Zrl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XrH-JK-mud">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cet-Eu-a2m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1700" y="993"/>
+            <point key="canvasLocation" x="-1994" y="993"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="t5h-0F-TTF">
