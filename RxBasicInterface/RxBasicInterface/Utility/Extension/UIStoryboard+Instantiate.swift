@@ -24,7 +24,7 @@ extension UIStoryboard {
         static var medium: UINavigationController {
             return UIStoryboard.getViewController(with: "MediumViewControllerNav")  as! UINavigationController
         }
-        static var nroadcast: UINavigationController {
+        static var broadcast: UINavigationController {
             return UIStoryboard.getViewController(with: "BroadcastViewControllerNav")  as! UINavigationController
         }
         static var group: UINavigationController {

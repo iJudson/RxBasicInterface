@@ -25,14 +25,11 @@
 		4F87E2481F64FD4B0025F4A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F87E2401F64FD4B0025F4A1 /* LaunchScreen.storyboard */; };
 		4F87E2491F64FD4B0025F4A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F87E2421F64FD4B0025F4A1 /* Main.storyboard */; };
 		4F87E24A1F64FD4B0025F4A1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F87E2441F64FD4B0025F4A1 /* Info.plist */; };
-		4F87E24B1F64FD4B0025F4A1 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F87E2451F64FD4B0025F4A1 /* MenuViewController.swift */; };
-		4F87E24D1F65004E0025F4A1 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F87E24C1F65004E0025F4A1 /* TabBarView.swift */; };
 		4F87E24E1F6501040025F4A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F87E23E1F64FD4B0025F4A1 /* AppDelegate.swift */; };
-		4F87E24F1F6501040025F4A1 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F87E2451F64FD4B0025F4A1 /* MenuViewController.swift */; };
-		4F87E2501F6501040025F4A1 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F87E24C1F65004E0025F4A1 /* TabBarView.swift */; };
-		4F87E2521F650CBB0025F4A1 /* CommonItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F87E2511F650CBB0025F4A1 /* CommonItemView.swift */; };
-		4F87E2531F650CCF0025F4A1 /* CommonItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F87E2511F650CBB0025F4A1 /* CommonItemView.swift */; };
 		4F87E2551F650DC80025F4A1 /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F87E2541F650DC80025F4A1 /* UIView + Extension.swift */; };
+		4F87E2581F6521400025F4A1 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F87E2571F6521400025F4A1 /* MenuViewController.swift */; };
+		4F87E25C1F6521460025F4A1 /* CommonItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F87E25A1F6521460025F4A1 /* CommonItemView.swift */; };
+		4F87E25D1F6521460025F4A1 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F87E25B1F6521460025F4A1 /* TabBarView.swift */; };
 		4FB3D80A1F6398C0006779D6 /* RxBasicInterfaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB3D8091F6398C0006779D6 /* RxBasicInterfaceTests.swift */; };
 		4FB3D8151F6398C0006779D6 /* RxBasicInterfaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB3D8141F6398C0006779D6 /* RxBasicInterfaceUITests.swift */; };
 /* End PBXBuildFile section */
@@ -67,10 +64,10 @@
 		4F87E2411F64FD4B0025F4A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F87E2431F64FD4B0025F4A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F87E2441F64FD4B0025F4A1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4F87E2451F64FD4B0025F4A1 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		4F87E24C1F65004E0025F4A1 /* TabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
-		4F87E2511F650CBB0025F4A1 /* CommonItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonItemView.swift; sourceTree = "<group>"; };
 		4F87E2541F650DC80025F4A1 /* UIView + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
+		4F87E2571F6521400025F4A1 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		4F87E25A1F6521460025F4A1 /* CommonItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonItemView.swift; sourceTree = "<group>"; };
+		4F87E25B1F6521460025F4A1 /* TabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		4FB3D7F11F6398C0006779D6 /* RxBasicInterface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxBasicInterface.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FB3D8051F6398C0006779D6 /* RxBasicInterfaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxBasicInterfaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FB3D8091F6398C0006779D6 /* RxBasicInterfaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxBasicInterfaceTests.swift; sourceTree = "<group>"; };
@@ -193,11 +190,27 @@
 				4F87E2401F64FD4B0025F4A1 /* LaunchScreen.storyboard */,
 				4F87E2421F64FD4B0025F4A1 /* Main.storyboard */,
 				4F87E2441F64FD4B0025F4A1 /* Info.plist */,
-				4F87E2451F64FD4B0025F4A1 /* MenuViewController.swift */,
-				4F87E24C1F65004E0025F4A1 /* TabBarView.swift */,
-				4F87E2511F650CBB0025F4A1 /* CommonItemView.swift */,
+				4F87E2591F6521460025F4A1 /* BasicView */,
+				4F87E2561F6521400025F4A1 /* BasicController */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		4F87E2561F6521400025F4A1 /* BasicController */ = {
+			isa = PBXGroup;
+			children = (
+				4F87E2571F6521400025F4A1 /* MenuViewController.swift */,
+			);
+			path = BasicController;
+			sourceTree = "<group>";
+		};
+		4F87E2591F6521460025F4A1 /* BasicView */ = {
+			isa = PBXGroup;
+			children = (
+				4F87E25A1F6521460025F4A1 /* CommonItemView.swift */,
+				4F87E25B1F6521460025F4A1 /* TabBarView.swift */,
+			);
+			path = BasicView;
 			sourceTree = "<group>";
 		};
 		4FB3D7E81F6398C0006779D6 = {
@@ -449,16 +462,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F87E22A1F64EC350025F4A1 /* GroupViewController.swift in Sources */,
-				4F87E24D1F65004E0025F4A1 /* TabBarView.swift in Sources */,
+				4F87E25D1F6521460025F4A1 /* TabBarView.swift in Sources */,
 				4F87E2291F64EC350025F4A1 /* BroadcastViewController.swift in Sources */,
 				4F87E2331F64EC350025F4A1 /* ProfileViewController.swift in Sources */,
 				4F87E2551F650DC80025F4A1 /* UIView + Extension.swift in Sources */,
-				4F87E2521F650CBB0025F4A1 /* CommonItemView.swift in Sources */,
+				4F87E25C1F6521460025F4A1 /* CommonItemView.swift in Sources */,
+				4F87E2581F6521400025F4A1 /* MenuViewController.swift in Sources */,
 				4F87E22B1F64EC350025F4A1 /* HomeViewController.swift in Sources */,
 				4F87E2461F64FD4B0025F4A1 /* AppDelegate.swift in Sources */,
 				4F87E2321F64EC350025F4A1 /* MediumViewController.swift in Sources */,
 				4F87E2341F64EC350025F4A1 /* UIStoryboard+Instantiate.swift in Sources */,
-				4F87E24B1F64FD4B0025F4A1 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,10 +479,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F87E2531F650CCF0025F4A1 /* CommonItemView.swift in Sources */,
 				4F87E24E1F6501040025F4A1 /* AppDelegate.swift in Sources */,
-				4F87E24F1F6501040025F4A1 /* MenuViewController.swift in Sources */,
-				4F87E2501F6501040025F4A1 /* TabBarView.swift in Sources */,
 				4F87E2371F64F8D60025F4A1 /* HomeViewController.swift in Sources */,
 				4F87E2381F64F8D60025F4A1 /* BroadcastViewController.swift in Sources */,
 				4F87E2391F64F8D60025F4A1 /* GroupViewController.swift in Sources */,
