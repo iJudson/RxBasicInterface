@@ -62,7 +62,7 @@
         <!--Medium View Controller-->
         <scene sceneID="My8-mg-6sQ">
             <objects>
-                <viewController storyboardIdentifier="MediumViewController" id="OGK-u1-EzG" customClass="MediumViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MediumViewController" id="OGK-u1-EzG" customClass="MediumViewController" customModule="RxBasicInterface" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LGZ-fm-1qe"/>
                         <viewControllerLayoutGuide type="bottom" id="hK6-R1-WfW"/>
@@ -138,7 +138,7 @@
         <!--Broadcast View Controller-->
         <scene sceneID="nxO-UK-4Ml">
             <objects>
-                <viewController storyboardIdentifier="BroadcastViewController" id="5sa-Tc-Jyh" customClass="BroadcastViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BroadcastViewController" id="5sa-Tc-Jyh" customClass="BroadcastViewController" customModule="RxBasicInterface" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vhu-Z3-z2T"/>
                         <viewControllerLayoutGuide type="bottom" id="7GH-ff-h2V"/>
@@ -184,7 +184,7 @@
         <!--Group View Controller-->
         <scene sceneID="JHD-IE-4zE">
             <objects>
-                <viewController storyboardIdentifier="GroupViewController" id="3Ll-1c-fYm" customClass="GroupViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GroupViewController" id="3Ll-1c-fYm" customClass="GroupViewController" customModule="RxBasicInterface" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WN0-Dw-qPQ"/>
                         <viewControllerLayoutGuide type="bottom" id="fER-zc-UoN"/>
@@ -230,7 +230,7 @@
         <!--Profile View Controller-->
         <scene sceneID="B9Z-ot-d8r">
             <objects>
-                <viewController storyboardIdentifier="ProfileViewController" id="pUA-eL-1CI" customClass="ProfileViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" id="pUA-eL-1CI" customClass="ProfileViewController" customModule="RxBasicInterface" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XKj-Td-tZl"/>
                         <viewControllerLayoutGuide type="bottom" id="66f-T0-yzw"/>

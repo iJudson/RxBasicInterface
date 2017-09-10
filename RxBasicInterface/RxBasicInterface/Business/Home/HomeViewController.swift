@@ -12,8 +12,13 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        initializeTopBarControls()
     }
 
+    fileprivate func initializeTopBarControls() {
+        let barStyle = NavigationBarStyle(center: (image: nil, title: "首页"))
+        let navigationBar = NavigationBar(themeStyle: barStyle)
+        self.view.addSubview(navigationBar)
+    }
 }
-    
+

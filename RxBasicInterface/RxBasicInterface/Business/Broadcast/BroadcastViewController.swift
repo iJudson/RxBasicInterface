@@ -13,7 +13,13 @@ class BroadcastViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        initializeTopBarControls()
     }
     
+    fileprivate func initializeTopBarControls() {
+        let barStyle = NavigationBarStyle(center: (image: nil, title: "广播"))
+        let navigationBar = NavigationBar(themeStyle: barStyle)
+        self.view.addSubview(navigationBar)
+    }
 }
-  
+
