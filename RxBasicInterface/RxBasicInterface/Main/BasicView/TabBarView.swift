@@ -36,11 +36,13 @@ class TabBarView: UIView {
     }
     
     //当前选中的 index
-    var selectedIndexes: [Driver<Int>] = []
+    var selectedIndex = Variable<Int>(0)
     
-    // 当前选中的 Item
-    fileprivate var selectedItems: [CommonItemView] = []
+    // 当前被选中的 items（该属性主要是为确认 item 的选择状态）
+    fileprivate var tabBarItems: [CommonItemView] = []
     
+    fileprivate let disposeBag = DisposeBag()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -72,14 +74,13 @@ class TabBarView: UIView {
             commonTabBarIem.titleLabel?.font = UIFont.systemFont(ofSize: 12)
             commonTabBarIem.setTitleColor(UIColor.gray, for: .normal)
             commonTabBarIem.setTitleColor(UIColor.black, for: .selected)
-            
-            self.selectedItems.append(commonTabBarIem)
+            self.tabBarItems.append(commonTabBarIem)
             self.addSubview(commonTabBarIem)
-            let selectedIndex = commonTabBarIem.rx.controlEvent(.touchDown).throttle(0.5, scheduler: MainScheduler.instance).flatMapLatest { (_) -> Driver<Int> in
-                self.handleClickItemEvent(index: commonTabBarIem.tag)
-                return Driver<Int>.just(commonTabBarIem.tag)
-                }.asDriver(onErrorJustReturn: 0)
-            selectedIndexes.append(selectedIndex)
+            
+            commonTabBarIem.rx.controlEvent(.touchDown).throttle(0.5, scheduler: MainScheduler.instance).subscribe(onNext: { _ in
+                self.selectedIndex.value = commonTabBarIem.tag
+                self.handleBarItemsElementStyle(index: commonTabBarIem.tag)
+            }).disposed(by: disposeBag)
             
             // 默认选中第一个 tabBarItem
             commonTabBarIem.isSelected = (index == 0 ? true : false)
@@ -98,8 +99,8 @@ class TabBarView: UIView {
     }
     
     // 处理 item 的点击事件，改变 Item 的样式
-    fileprivate func handleClickItemEvent(index: Int) {
-        for item in selectedItems {
+    fileprivate func handleBarItemsElementStyle(index: Int) {
+        for item in tabBarItems {
             item.isSelected = (item.tag == index ? true : false)
         }
     }

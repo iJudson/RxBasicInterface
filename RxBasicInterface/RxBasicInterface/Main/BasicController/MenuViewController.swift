@@ -72,15 +72,12 @@ final class MenuViewController: UIViewController {
         let tabBarView = TabBarView(themeStyle: tabBarStyle)
         self.view.addSubview(tabBarView)
         
-        for selectedIndex in tabBarView.selectedIndexes {
-            selectedIndex.drive(onNext: { [weak self] (index) in
-                guard let strongSelf = self else {
-                    return
-                }
-                strongSelf.handleTopControllerSelectionEvent(currentIndex: index)
-                
-            }).disposed(by: disposeBag)
-        }
+        tabBarView.selectedIndex.asObservable().observeOn(MainScheduler.instance).bind { [weak self] (clickedIndex) in
+            guard let strongSelf = self else {
+                return
+            }
+            strongSelf.handleTopControllerSelectionEvent(currentIndex: clickedIndex)
+        }.disposed(by: disposeBag)
     }
     
     fileprivate func handleTopControllerSelectionEvent(currentIndex: Int) {

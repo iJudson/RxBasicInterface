@@ -42,7 +42,7 @@ class NavigationBar: UIView {
     }
     
     // bar 上三个位置上(左、中、右)的点击事情，默认无点击事件
-    var tapActions: [Observable<Int>] = []
+    var clickedIndex = PublishSubject<Int>()
     
     fileprivate let disposeBag = DisposeBag()
     
@@ -104,11 +104,12 @@ extension NavigationBar {
         let commonIem = CommonItemView(frame: itemFrame, image: style.image, title: style.title)
         commonIem.backgroundColor = themeStyle.themeColor
         commonIem.tag  = itemTag
-        let tapAction = commonIem.rx.tap.throttle(0.5, scheduler: MainScheduler.instance).flatMapLatest { (_) -> Observable<Int> in
-            return Observable<Int>.just(commonIem.tag)
-        }
-        tapActions.append(tapAction)
         self.addSubview(commonIem)
+        
+        // 点击事件的监控处理
+        commonIem.rx.tap.throttle(0.5, scheduler: MainScheduler.instance).subscribe(onNext: { _ in
+            self.clickedIndex.onNext(itemTag)
+        }).disposed(by: disposeBag)
     }
     
     fileprivate func add(BottomLine isExisting: Bool) {

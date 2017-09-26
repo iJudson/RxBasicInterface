@@ -30,8 +30,13 @@ class TopPageBar: UIView {
             updateThemeStyle()
         }
     }
-    // item 从左到右进行排布 tag 从0开始依次递增
-    var clickedIndexes: [Driver<Int>] = []
+    
+    // 被选中的 item 的 tag（被外部监听的属性）
+    var clickedIndex = Variable<Int>(0)
+    
+    fileprivate var elements: [UIButton] = []
+    
+    fileprivate let disposeBag = DisposeBag()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -68,6 +73,8 @@ class TopPageBar: UIView {
             button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
             button.titleLabel?.sizeToFit()
             self.addSubview(button)
+            elements.append(button)
+            
             let titleWidth = button.titleLabel?.width ?? 0
             let horizontalOffset = subViewWidth * 0.5 - themeStyle.horizontalInsets - titleWidth * 0.5
             
@@ -77,14 +84,19 @@ class TopPageBar: UIView {
                 button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -horizontalOffset)
             }
             
-            let clickedIndex = button.rx.controlEvent(.touchDown).throttle(0.5, scheduler: MainScheduler.instance).flatMapLatest { (_) -> Driver<Int> in
-                return Driver<Int>.just(button.tag)
-                }.asDriver(onErrorJustReturn: 0)
-            clickedIndexes.append(clickedIndex)
+            button.rx.controlEvent(.touchDown).throttle(0.5, scheduler: MainScheduler.instance).subscribe(onNext: { _ in
+                self.clickedIndex.value = index
+                self.handleElementsStyle(index: index)
+            }).disposed(by: disposeBag)
             
-            if index == 0 {
-                button.isSelected = true
-            }
+            // 默认选中第1个item
+            button.isSelected = (index == 0 ?  true : false)
+        }
+    }
+    
+    fileprivate func handleElementsStyle(index: Int) {
+        for element in elements {
+            element.isSelected = (element.tag == index ? true : false)
         }
     }
     

@@ -27,13 +27,17 @@ class MediumViewController: UIViewController {
         navigationBar.addSubview(topPageBar)
         self.view.addSubview(navigationBar)
         
-        for tapIndex in topPageBar.clickedIndexes {
-            tapIndex.drive(onNext: { (index) in
-                // 在这个地方绑定点击的具体事件
-                
-            }).disposed(by: disposeBag)
-        }
+        topPageBar.clickedIndex.asObservable().observeOn(MainScheduler.instance).bind { [weak self] (clickedIndex) in
+            guard let strongSelf = self else {
+                return
+            }
+            strongSelf.handlePageItemClickedEvent(selectedIndex: clickedIndex)
+        }.disposed(by: disposeBag)
     }
     
+    // 处理页面被选中的事件
+    fileprivate func handlePageItemClickedEvent(selectedIndex: Int) {
+        
+    }
 }
-  
+
